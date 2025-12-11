@@ -1,0 +1,29 @@
+# Lazy.nvim plugin directory
+lazy-lock.json
+
+# Neovim swap files
+*.swp
+*.swo
+
+# Neovim undo files
+*.un~
+
+# Session files
+Session.vim
+.netrwhist
+
+# Log files
+*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*~
+*.tmp
+*.temp
