@@ -22,11 +22,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- Load plugin configurations from separate files
   spec = {
+    { import = "themes" },
+    { import = "plugins.web-devicons" },
     { import = "plugins.neo-tree" },
     { import = "plugins.bufferline" },
+    { import = "plugins.lspconfig" },
+    { import = "plugins.mason" },
+    { import = "plugins.diffview" },
+    { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
+    { import = "plugins.which-key" },
   },
 
-  install = { colorscheme = { "habamax" } },
+  install = { colorscheme = { "catppuccin" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
