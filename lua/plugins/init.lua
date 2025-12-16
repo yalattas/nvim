@@ -29,6 +29,7 @@ require("lazy").setup({
     { import = "plugins.lspconfig" },
     { import = "plugins.mason" },
     { import = "plugins.diffview" },
+    { import = "plugins.lazygit" },
     { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
     { import = "plugins.which-key" },
   },
