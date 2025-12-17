@@ -26,12 +26,14 @@ require("lazy").setup({
     { import = "plugins.web-devicons" },
     { import = "plugins.neo-tree" },
     { import = "plugins.bufferline" },
+    { import = "plugins.lualine" },
     { import = "plugins.lspconfig" },
     { import = "plugins.mason" },
+    { import = "plugins.nvim-sops" },
     { import = "plugins.diffview" },
     { import = "plugins.lazygit" },
     { import = "plugins.telescope" },
-    { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
+    -- { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
     { import = "plugins.which-key" },
   },
 
