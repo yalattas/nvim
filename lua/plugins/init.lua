@@ -26,6 +26,7 @@ require("lazy").setup({
 		{ import = "plugins.neo-tree" },
 		{ import = "plugins.bufferline" },
 		{ import = "plugins.lualine" },
+		{ import = "plugins.cmp" },
 		{ import = "plugins.lspconfig" },
 		{ import = "plugins.nvim-sops" },
 		{ import = "plugins.diffview" },

@@ -18,8 +18,16 @@ return {
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				end,
 			})
+
 			-- Keep the log level at warn so users only see actionable diagnostics from Neovim.
 			vim.lsp.set_log_level("warn")
+
+			local default_capabilities = vim.lsp.protocol.make_client_capabilities()
+			local cmp_capabilities = default_capabilities
+			local cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+			if cmp_ok and cmp_nvim_lsp then
+				cmp_capabilities = cmp_nvim_lsp.default_capabilities(default_capabilities)
+			end
 
 			-- Register and enable the language servers that live under lua/lsp.
 			local servers = {
@@ -37,7 +45,11 @@ return {
 			for _, server_name in ipairs(servers) do
 				local ok, config = pcall(require, "lsp." .. server_name)
 				if ok and config then
-					vim.lsp.config(server_name, config)
+					local server_capabilities = vim.tbl_deep_extend("force", {}, config.capabilities or {}, cmp_capabilities)
+					local server_config = vim.tbl_deep_extend("force", {}, config, {
+						capabilities = server_capabilities,
+					})
+					vim.lsp.config(server_name, server_config)
 					enabled[#enabled + 1] = server_name
 				else
 					vim.notify(
