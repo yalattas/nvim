@@ -27,7 +27,6 @@ require("lazy").setup({
 		{ import = "plugins.bufferline" },
 		{ import = "plugins.lualine" },
 		{ import = "plugins.lspconfig" },
-		{ import = "plugins.mason" },
 		{ import = "plugins.nvim-sops" },
 		{ import = "plugins.diffview" },
 		{ import = "plugins.lazygit" },

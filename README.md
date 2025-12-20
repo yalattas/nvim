@@ -2,7 +2,16 @@
 cd $HOME/.config
 git clone git@github.com:yalattas/nvim.git nvim
 
+# checkhealth
+## lsp
+```
+:checkhealth vim.lsp
+```
 # Key Bindings
+## lspconfig
+```
+brew install lua-language-server
+```
 ## Explorer
 - `<leader>e`: Toggle Explorer
 - `<leader>m`: Back to Explorer
