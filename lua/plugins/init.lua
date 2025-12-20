@@ -32,6 +32,7 @@ require("lazy").setup({
 		{ import = "plugins.diffview" },
 		{ import = "plugins.lazygit" },
 		{ import = "plugins.telescope" },
+		{ import = "plugins.blamer" },
 		-- { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
 		{ import = "plugins.which-key" },
 		{ import = "plugins.conform" },

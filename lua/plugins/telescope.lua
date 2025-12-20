@@ -10,9 +10,12 @@ return {
         defaults = {
           layout_config = {
             vertical = { width = 0.5 },
-            -- other layout configuration here
+            mappings = {
+              i = {
+                ["<C-h>"] = "which_key"
+              }
+            },
           },
-          -- other defaults configuration here
         },
       })
     end,
