@@ -35,6 +35,8 @@ require("lazy").setup({
 		-- { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
 		{ import = "plugins.which-key" },
 		{ import = "plugins.conform" },
+		{ import = "plugins.vim-indent-object" },
+		{ import = "plugins.nvim-autopair" },
 	},
 
 	install = { colorscheme = { "catppuccin" } },
