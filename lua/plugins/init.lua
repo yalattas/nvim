@@ -40,6 +40,7 @@ require("lazy").setup({
 		{ import = "plugins.nvim-autopair" },
 		{ import = "plugins.codecompanion" },
 		{ import = "plugins.render-markdown" },
+		{ import = "plugins.mini-icons" },
 	},
 
 	install = { colorscheme = { "catppuccin" } },
