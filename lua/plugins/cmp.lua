@@ -77,6 +77,18 @@ return {
 					}
 				),
 			})
+
+			cmp.setup.filetype("codecompanion", {
+				sources = cmp.config.sources(
+					{
+						{ name = "codecompanion" },
+					},
+					{
+						{ name = "buffer" },
+						{ name = "path" },
+					}
+				),
+			})
 		end,
 	},
 }

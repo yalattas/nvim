@@ -33,11 +33,13 @@ require("lazy").setup({
 		{ import = "plugins.lazygit" },
 		{ import = "plugins.telescope" },
 		{ import = "plugins.blamer" },
-		-- { import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
+		{ import = "plugins.treesitter" }, -- doesn't seems to add value. Consider deleting it
 		{ import = "plugins.which-key" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.vim-indent-object" },
 		{ import = "plugins.nvim-autopair" },
+		{ import = "plugins.codecompanion" },
+		{ import = "plugins.render-markdown" },
 	},
 
 	install = { colorscheme = { "catppuccin" } },
