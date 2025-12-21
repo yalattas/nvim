@@ -20,6 +20,11 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+-- CodeCompanion toggle
+vim.keymap.set('n', '<leader>ll', function()
+	require('codecompanion').toggle()
+end, { desc = 'Toggle CodeCompanion' })
+
 -- toggleterm shortcut from normal and terminal modes
 -- vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>', { desc = 'Toggle floating terminal' })
 -- vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggle floating terminal from terminal' })
