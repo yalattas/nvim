@@ -39,13 +39,15 @@ return {
 				"ts_ls",
 				"vimls",
 				"yamlls",
+				"terraformls",
 			}
 
 			local enabled = {}
 			for _, server_name in ipairs(servers) do
 				local ok, config = pcall(require, "lsp." .. server_name)
 				if ok and config then
-					local server_capabilities = vim.tbl_deep_extend("force", {}, config.capabilities or {}, cmp_capabilities)
+					local server_capabilities =
+						vim.tbl_deep_extend("force", {}, config.capabilities or {}, cmp_capabilities)
 					local server_config = vim.tbl_deep_extend("force", {}, config, {
 						capabilities = server_capabilities,
 					})

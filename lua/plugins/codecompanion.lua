@@ -18,7 +18,7 @@ return {
 				},
 				cmd = {
 					adapter = "claude_code",
-				}
+				},
 			},
 			adapters = {
 				acp = {
